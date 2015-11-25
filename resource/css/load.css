@@ -1,0 +1,15 @@
+body{
+	font-family: 微软雅黑;
+	background: #eee;
+}
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/icomoon.woff2') format('woff2'), 
+         url('../fonts/icomoon.woff') format('woff'), 
+         url('../fonts/icomoon.ttf')  format('truetype'), 
+         url('../fonts/icomoon.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: normal;
+	font-style: normal;
+}
