@@ -72,7 +72,18 @@ class User extends CI_Controller
             echo json_encode($error);
         } else {
             $data = $this->upload->data();
+            $this->word2html($data['full_path']);
             echo json_encode($data);
         }
+    }
+
+    private function word2html($path)
+    {
+        $word = new COM("Word.Application") or die("无法打开 MS Word");
+        $word->visible = 1;
+        $word->Documents->Open($path) or die("无法打开这个文件");
+        $htmlpath = substr($path, 0, -4);
+        $word->ActiveDocument->SaveAs($htmlpath, 8);
+        $word->quit(0);
     }
 }
